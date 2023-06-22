@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:systemDB
+
+  sql:
+    init:
+      continue-on-error: true
+      schema-locations: classpath:mapper/schemas/*.sql
+      mode: always
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+server:
+  port: 9001
